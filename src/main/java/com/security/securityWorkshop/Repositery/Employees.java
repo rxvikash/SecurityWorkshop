@@ -33,7 +33,7 @@ public class Employees implements UserDetails {
         SimpleGrantedAuthority authority = new SimpleGrantedAuthority("ROLE_" + this.getRole());
         return List.of(authority);
     }
-
+    @JsonIgnore
     @Override
     public @Nullable String getPassword() {
         return password;
